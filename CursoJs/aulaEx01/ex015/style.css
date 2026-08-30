@@ -14,6 +14,9 @@ section{
     margin: auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
+.data{
+    width: 50px;
+}
 div#msg{
     text-align: center;
 }

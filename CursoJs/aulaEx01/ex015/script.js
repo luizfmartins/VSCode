@@ -1,14 +1,25 @@
 function verificar() {
     var data = new Date()
     var ano = data.getFullYear()
+    var mes = data.getMonth() + 1
+    var dia = data.getDate()
     var fAno = document.getElementById('txtano')
+    var fMes = document.getElementById('txtmes')
+    var fDia = document.getElementById('txtdia')
     var msg = document.getElementById('msg')
     var img = document.getElementById('imagem')
-    if (fAno.value.length == 0 || Number(fAno.value) > ano) {
+    var idade = 0
+
+    //Cálculo da idade
+    if (fMes.value > mes || fMes.value == mes && fDia.value > dia) {
+        idade = ano - fAno.value - 1
+    } else {
+        idade = ano - fAno.value
+    }
+    if (!validacao(fAno, fMes, fDia, ano)) {
         alert('[ERRO] Verifique os dados e tente novamente')
     } else {
         var fsex = document.getElementsByName('radsex')
-        var idade = ano - Number(fAno.value)
         var genero = ''
         if (fsex[0].checked) {
             genero = 'Homem'
@@ -35,4 +46,11 @@ function verificar() {
         }
         msg.innerHTML = `Detectamos ${genero} com ${idade} anos.`
     }
+}
+
+function validacao(fAno, fMes, fDia, ano) {
+    if (fMes.value < 1 || fMes.value > 12 || fDia.value < 1 || fDia.value > 31 || fAno.value.length == 0 || Number(fAno.value) > ano) {
+        return false
+    }
+    return true
 }
