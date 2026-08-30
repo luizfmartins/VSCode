@@ -16,6 +16,7 @@ function verificar() {
     } else {
         idade = ano - fAno.value
     }
+    
     if (!validacao(fAno, fMes, fDia, ano)) {
         alert('[ERRO] Verifique os dados e tente novamente')
     } else {
@@ -54,3 +55,4 @@ function validacao(fAno, fMes, fDia, ano) {
     }
     return true
 }
+
