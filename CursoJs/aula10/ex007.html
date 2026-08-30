@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             font: normal 18pt Arial;
         }
-        input{
+
+        input {
             font: normal 18pt Arial;
             width: 100px;
         }
-        div#res{
+
+        div#res {
             margin-top: 20px;
         }
     </style>
 </head>
+
 <body>
     <h1>Somando Valores</h1>
     <input type="number" name="txtn1" id="txtn1">
     <input type="number" name="txtn2" id="txtn2">
     <input type="button" value="Somar" id="soma">
-    <div id="res">Resultado</div>
+    <div id="res"></div>
     <script>
         var a = document.getElementById('soma')
         a.addEventListener('click', somar)
-        
-        function somar(){
+        function somar() {
             var tn1 = document.getElementById('txtn1')
             var tn2 = document.querySelector('input#txtn2')
             var res = document.getElementById('res')
@@ -38,4 +41,5 @@
         }
     </script>
 </body>
+
 </html>
