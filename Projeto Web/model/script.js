@@ -38,7 +38,7 @@ function verificarLinha() {
     }
 }
 
-function verificarColuna(matriz) {
+function verificarColuna() {
     for (var i = 0; i < matriz.length; i++) {
         var numX = 0
         var numO = 0
@@ -57,7 +57,7 @@ function verificarColuna(matriz) {
     }
 }
 
-function verificarDiagonal(matriz) {
+function verificarDiagonal() {
     for (var i = 0; i < matriz.length; i++) {
         var numX = 0
         var numO = 0
@@ -76,8 +76,8 @@ function verificarDiagonal(matriz) {
     }
 }
 
-function verificar(matriz) {
-    verificarLinha(matriz)
-    verificarColuna(matriz)
-    verificarDiagonal(matriz)
+function verificar() {
+    verificarLinha()
+    verificarColuna()
+    verificarDiagonal()
 }
