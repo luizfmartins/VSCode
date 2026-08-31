@@ -1,78 +1,95 @@
-function velha(){
-  var matriz = [
-    [ , , ],
-    [ , , ],
-    [ , , ]
-  ]
-  var jogada = ''
-  for(var i = 0; i < 9; i++ ){
-    if(i % 2 == 0){
-      jogada = 'X'
+var jogada = 0
+var matriz = [
+    [, ,],
+    [, ,],
+    [, ,]
+]
+msg = document.getElementById('msg')
+function velha(n, n1, n2) {
+    var tab = document.getElementsByName('tab')[n]
+    if (jogada % 2 == 0) {
+        matriz[n1][n2] = 'X'
+        tab.innerHTML = 'X'
     } else {
-      jogada = 'O'
+        matriz[n1][n2] = 'O'
+        tab.innerHTML = 'O'
     }
-  }
+    jogada++
+    verificar()
+    
 }
 
-function verificarColuna(matriz){
-  for(var i = 0; i < matriz.length; i++){
-    var numX = 0
-    var numO = 0
-    for(var j = 0; j < matriz[0].length; j++){
-      if(matriz[i][j] == 'X'){
-        numX++
-      } else if(matriz[i][j] == 'O'){
-        numO++
-      }
+function verificarLinha() {
+    for (var i = 0; i < matriz.length; i++) {
+        var numX = 0
+        var numO = 0
+        for (var j = 0; j < matriz[0].length; j++) {
+            if (matriz[i][j] == 'X') {
+                numX++
+            } else if (matriz[i][j] == 'O') {
+                numO++
+            }
+        }
+        if (numX >= 3) {
+            msg.innerHTML = "O 'X' ganhou!"
+            return true
+        } else if (numO >= 3) {
+            msg.innerHTML = "O 'O' ganhou!"
+          return true
+        }
     }
-    if(numX >= 3){
-      //Vitória X
-    } else if (numO >= 3){
-      //Vitória O
-    }
-  }
+  return false
 }
 
-function verificarLinha(matriz){
-  for(var i = 0; i < matriz.length; i++){
-    var numX = 0
-    var numO = 0
-    for(var j = 0; j < matriz[0].length; j++){
-      if(matriz[j][i] == 'X'){
-        numX++
-      } else if(matriz[j][i] == 'O'){
-        numO++
-      }
+function verificarColuna() {
+    for (var i = 0; i < matriz.length; i++) {
+        var numX = 0
+        var numO = 0
+        for (var j = 0; j < matriz[0].length; j++) {
+            if (matriz[j][i] == 'X') {
+                numX++
+            } else if (matriz[j][i] == 'O') {
+                numO++
+            }
+        }
+        if (numX >= 3) {
+            msg.innerHTML = "O 'X' ganhou!"
+          return true
+        } else if (numO >= 3) {
+            msg.innerHTML = "O 'O' ganhou!"
+          return true
+        }
     }
-    if(numX >= 3){
-      //Vitória X
-    } else if (numO >= 3){
-      //Vitória O
-    }
-  }
+  return false
 }
 
-function verificarDiagonal(matriz){
-  for(var i = 0; i < matriz.length; i++){
-    var numX = 0
-    var numO = 0
-    for(var j = 0; j < matriz[0].length; j++){
-      if(i==j && matriz[i][j] == 'X'){
-        numX++
-      } else if(i==j && matriz[i][j] == 'O'){
-        numO++
-      }
+function verificarDiagonal() {
+    for (var i = 0; i < matriz.length; i++) {
+        var numX = 0
+        var numO = 0
+        for (var j = 0; j < matriz[0].length; j++) {
+            if (i == j && matriz[i][j] == 'X') {
+                numX++
+            } else if (i == j && matriz[i][j] == 'O') {
+                numO++
+            }
+        }
+        if (numX >= 3) {
+            msg.innerHTML = "O 'X' ganhou!"
+          return true
+        } else if (numO >= 3) {
+            msg.innerHTML = "O 'O' ganhou!"
+          return true
+        }
     }
-    if(numX >= 3){
-      //Vitória X
-    } else if (numO >= 3){
-      //Vitória O
-    }
-  }
+  return false
 }
 
- function verificar(matriz){
-   verificarLinha(matriz)
-   verificarColuna(matriz)
-   verificarDiagonal(matriz)
- }
+function verificar() {
+  if(verificarLinha())
+    return
+  if(verificarColuna())
+    return
+  if(verificarDiagonal())
+    return  
+}
