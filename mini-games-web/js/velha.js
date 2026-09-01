@@ -1,14 +1,14 @@
-var jogada = 0
-var fim = false
-var matriz = [
+let jogada = 0
+let fim = false
+let matriz = [
     [, ,],
     [, ,],
     [, ,]
 ]
-msg = document.getElementById('msg')
+let msg = document.getElementById('msg')
 function velha(n, n1, n2) {
     if (!fim) {
-        var tab = document.getElementsByName('tab')[n]
+        let tab = document.getElementsByName('tab')[n]
         if (matriz[n1][n2] == undefined) {
             if (jogada % 2 == 0) {
                 matriz[n1][n2] = 'X'
@@ -29,7 +29,7 @@ function velha(n, n1, n2) {
 
 function verificarLinha() {
 
-    for (var i = 0; i < matriz.length; i++) {
+    for (let i = 0; i < matriz.length; i++) {
 
         if (matriz[i][0] != undefined &&
             matriz[i][0] == matriz[i][1] &&
@@ -45,7 +45,7 @@ function verificarLinha() {
 
 function verificarColuna() {
 
-    for (var i = 0; i < matriz.length; i++) {
+    for (let i = 0; i < matriz.length; i++) {
 
         if (matriz[0][i] != undefined &&
             matriz[0][i] == matriz[1][i] &&
@@ -98,13 +98,13 @@ function verificar() {
 function recomeçar() {
     jogada = 0
     fim = false
-    for(var i = 0; i < matriz.length ; i++){
-        for(var j = 0; j < matriz[0].length; j++){
+    for(let i = 0; i < matriz.length ; i++){
+        for(let j = 0; j < matriz[0].length; j++){
             matriz[i][j] = undefined
         }
     }
-    for(var i = 0; i < 9; i++){
-        tab = document.getElementsByName('tab')[i]
+    for(let i = 0; i < 9; i++){
+       let tab = document.getElementsByName('tab')[i]
         tab.innerHTML = ''
     }
     msg.innerHTML = ''
