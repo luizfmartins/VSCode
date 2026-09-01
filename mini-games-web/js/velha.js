@@ -1,4 +1,5 @@
 var jogada = 0
+var fim = false
 var matriz = [
     [, ,],
     [, ,],
@@ -6,19 +7,23 @@ var matriz = [
 ]
 msg = document.getElementById('msg')
 function velha(n, n1, n2) {
-    var tab = document.getElementsByName('tab')[n]
-    if (matriz[n1][n2] == undefined) {
-        if (jogada % 2 == 0) {
-            matriz[n1][n2] = 'X'
-            tab.innerHTML = 'X'
+    if (!fim) {
+        var tab = document.getElementsByName('tab')[n]
+        if (matriz[n1][n2] == undefined) {
+            if (jogada % 2 == 0) {
+                matriz[n1][n2] = 'X'
+                tab.innerHTML = 'X'
+            } else {
+                matriz[n1][n2] = 'O'
+                tab.innerHTML = 'O'
+            }
+            jogada++
+            verificar()
         } else {
-            matriz[n1][n2] = 'O'
-            tab.innerHTML = 'O'
+            alert('Esse lugar já está ocupado! Tente outro!')
         }
-        jogada++
-        verificar()
     } else {
-        alert('Esse lugar já está ocupado! Tente outro!')
+        alert('O jogo acabou! Clique para recomeçar.')
     }
 }
 
@@ -76,10 +81,31 @@ function verificarDiagonal() {
 }
 
 function verificar() {
-    if (verificarLinha())
+    if (verificarLinha()) {
+        fim = true
         return
-    if (verificarColuna())
+    }
+    if (verificarColuna()) {
+        fim = true
         return
-    if (verificarDiagonal())
+    }
+    if (verificarDiagonal()) {
+        fim = true
         return
+    }
+}
+
+function recomeçar() {
+    jogada = 0
+    fim = false
+    for(var i = 0; i < matriz.length ; i++){
+        for(var j = 0; j < matriz[0].length; j++){
+            matriz[i][j] = undefined
+        }
+    }
+    for(var i = 0; i < 9; i++){
+        tab = document.getElementsByName('tab')[i]
+        tab.innerHTML = ''
+    }
+    msg.innerHTML = ''
 }

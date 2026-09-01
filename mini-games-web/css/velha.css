@@ -23,10 +23,26 @@ td div{
     justify-content: center;
     align-items: center;
 }
-div#msg{
+section div#msg{
     margin-top: 10px;
     text-align: center;
 }
 hr{
     margin-top: 30px;
+}
+input#recomecar{
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    background-color: rgb(124, 34, 124);
+    color: rgb(190, 46, 235);
+    text-decoration: none;
+    border-radius: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+
+}
+input#recomecar:hover{
+    background-color: rgb(94, 15, 99);
+    color: aqua;
 }
