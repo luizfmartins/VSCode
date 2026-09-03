@@ -5,7 +5,6 @@ let matriz = [
     [, ,],
     [, ,]
 ]
-let msg = document.getElementById('msg')
 function velha(n, n1, n2) {
     if (!fim) {
         let tab = document.getElementsByName('tab')[n]
@@ -28,7 +27,7 @@ function velha(n, n1, n2) {
 }
 
 function verificarLinha() {
-
+    let msg = document.getElementById('msg')
     for (let i = 0; i < matriz.length; i++) {
 
         if (matriz[i][0] != undefined &&
@@ -46,7 +45,7 @@ function verificarLinha() {
 function verificarColuna() {
 
     for (let i = 0; i < matriz.length; i++) {
-
+        let msg = document.getElementById('msg')
         if (matriz[0][i] != undefined &&
             matriz[0][i] == matriz[1][i] &&
             matriz[1][i] == matriz[2][i]) {
@@ -60,7 +59,7 @@ function verificarColuna() {
 }
 
 function verificarDiagonal() {
-
+    let msg = document.getElementById('msg')
     if (matriz[0][0] != undefined &&
         matriz[0][0] == matriz[1][1] &&
         matriz[1][1] == matriz[2][2]) {
