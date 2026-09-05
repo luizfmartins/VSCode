@@ -7,6 +7,7 @@ let matriz = [
     [, ,],
     [, ,]
 ]
+let msg = document.getElementById('msg')
 function velha(n, n1, n2) {
     if (jogoAtivo) {
         let tab = document.getElementsByName('tab')[n]
@@ -31,14 +32,12 @@ function velha(n, n1, n2) {
             alert('Esse lugar já está ocupado! Tente outro!')
         }
     } else {
-        alert('O jogo acabou! Clique para recomeçar.')
+        alert('O jogo não está ativo. Clique em iniciar para começar um novo jogo.')
     }
 }
 
 function verificarLinha() {
-    let msg = document.getElementById('msg')
     for (let i = 0; i < matriz.length; i++) {
-
         if (matriz[i][0] != undefined &&
             matriz[i][0] == matriz[i][1] &&
             matriz[i][1] == matriz[i][2]) {
@@ -54,7 +53,6 @@ function verificarLinha() {
 function verificarColuna() {
 
     for (let i = 0; i < matriz.length; i++) {
-        let msg = document.getElementById('msg')
         if (matriz[0][i] != undefined &&
             matriz[0][i] == matriz[1][i] &&
             matriz[1][i] == matriz[2][i]) {
@@ -69,7 +67,6 @@ function verificarColuna() {
 }
 
 function verificarDiagonal() {
-    let msg = document.getElementById('msg')
     if (matriz[0][0] != undefined &&
         matriz[0][0] == matriz[1][1] &&
         matriz[1][1] == matriz[2][2]) {
