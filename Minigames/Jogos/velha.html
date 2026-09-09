@@ -4,49 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo da Zenira</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Jogo da Vanilda</title>
+    <link rel="stylesheet" href="/Minigames/css/style.css">
 
 </head>
 
 <body>
     <header>
-        <h1>👵 Jogo da Zenira</h1>
+        <h1>👵 Jogo da Vanilda</h1>
     </header>
     <main>
-        <p style="color: green;"><b>Escolher personagem do jogador 1:</b></p>
+        <p style="color: black;"><b>Escolher personagem do jogador 1:</b></p>
         <div class="escolherJogador1">
             <button onclick="escolherJogador1('💀')">💀</button>
             <button onclick="escolherJogador1('🍕')">🍕</button>
             <button onclick="escolherJogador1('👽')">👽</button>
         </div>
-        <p style="color: green;"><b>Escolher personagem do jogador 2:</b></p>
+        <p id="jogador1-escolhido">Jogador 1: Nenhum</p>
+        <p style="color: black;;"><b>Escolher personagem do jogador 2:</b></p>
         <div class="escolherJogador2">
-            <button onclick="escolherJogador1('😎')">😎</button>
-            <button onclick="escolherJogador1('😶')">😶</button>
-            <button onclick="escolherJogador1('😍')">😍</button>
+            <button onclick="escolherJogador2('😎')">😎</button>
+            <button onclick="escolherJogador2('😶')">😶</button>
+            <button onclick="escolherJogador2('😍')">😍</button>
         </div>
+        <p id="jogador2-escolhido">Jogador 2 : Nenhum</p>
         <div class="iniciarJogo">
-        <button onclick="iniciarJogo()"><b>Iniciar Jogo</b></button>
+            <button onclick="iniciarJogo()"><b>Iniciar Jogo</b></button>
         </div>
-        <p style="color: green;"><b>Jogador da vez:</b></p>
+        <p id="jogador-atual" style="color: black;"><b>Jogador da vez:</b></p>
         <br>
         <section class="Velha">
-            <table>
+            <table class="tabuleiro">
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td onclick="jogar(this)"></td>
+                    <td onclick="jogar(this)"></td>
+                    <td onclick="jogar(this)"></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td onclick="jogar(this)"></td>
+                    <td onclick="jogar(this)"></td>
+                    <td onclick="jogar(this)"></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td onclick="jogar(this)"></td>
+                    <td onclick="jogar(this)"></td>
+                    <td onclick="jogar(this)"></td>
                 </tr>
             </table>
         </section>
@@ -55,9 +57,10 @@
     </main>
 
     <footer>
-        <p>MiniGames do Vinicin</p>
+        <p>MiniGames do Lipe</p>
     </footer>
-    <script src="velha.js"></script>
+    <script src="/Minigames/js/velha.js"></script>
 </body>
+
 
 </html>

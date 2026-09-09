@@ -4,7 +4,7 @@
 
 /* Estilização do cabeçalho usado nas paginas index.html, velha.html e sudoku.html */
 body {
-    background-color: rgb(180, 204, 114);
+    background-color: rgb(233, 218, 193);
     margin: 0;
     padding: 25px;
     font-size: 20px;
@@ -14,7 +14,7 @@ body {
 
 header {
     text-align: center;
-    background-color: green;
+    background-color: #1f4e78;
     color: white;
     padding: 40px;
 }
@@ -44,16 +44,18 @@ main {
 /*Tabela da velha:*/
 
 .Velha table {
-    width: 35%;
-    border: 3px solid black;
     border-collapse: collapse;
     background-color: white;
 }
 
 .Velha td {
+    width: 120px;
+    height: 120px;
     border: 3px solid black;
-    padding: 50px;
-    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 60px;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -102,9 +104,6 @@ section {
     font-size: 18px;
 }
 
-.Zenira {
-    padding: 8px;
-}
 
 .Jaimin {
     padding: 8px;
@@ -137,7 +136,7 @@ a {
 
 footer {
     text-align: center;
-    background-color: rgb(2, 201, 2);
+    background-color: #222;
     padding: 20px;
     margin-top: 50px;
 }
@@ -165,7 +164,7 @@ footer {
     margin: 10px;
     cursor: pointer;
     background-color:   transparent;
-    border: 2px solid green;
-    color: green;
+    border: 2px solid black;
+    color: black;
     border-radius: 5px;
 }
