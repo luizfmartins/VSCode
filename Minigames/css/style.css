@@ -69,17 +69,22 @@ main {
 .table-sudoku {
     color: black;
     border-collapse: collapse;
+    margin: 30px auto;
+}
+.table-sudoku td {
+    width: 55px;
+    height: 55px;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
 }
 
 .table-sudoku tr {
     border: 1px solid black;
-}
-.table-sudoku td {
-    border: 1px solid black;
-    padding: 35px;
-    font-size: 12px;
-    background-color: white;
-    cursor: pointer;
 }
 .table-sudoku tr:nth-child(3) td{
     border-bottom: 3px solid black;
@@ -95,6 +100,14 @@ main {
 
 .table-sudoku td:nth-child(6) {
     border-right: 3px solid black;
+}
+
+.table-sudoku td[contenteditable = "true"]{
+    background-color: fff;
+}
+
+.table-sudoku td:not[contenteditable = "true"]{
+    background-color: fff;
 }
 
 section {

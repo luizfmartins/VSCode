@@ -29,10 +29,18 @@ const combinacoesVitoria = [
 //Escolher emoji/personagem do jogador 1
 
 function escolherJogador1(emoji) {
+    if(jogoAtivo === true){
+        alert('Não é possível trocar de personagem no meio da partida')
+        return
+    }
     jogador1 = emoji;
     document.getElementById('jogador1-escolhido').innerText = 'Jogador 1: ' + jogador1
 }
 function escolherJogador2(emoji) {
+    if(jogoAtivo === true){
+        alert('Não é possível trocar de personagem no meio da partida')
+        return
+    }
     jogador2 = emoji
 
     document.getElementById('jogador2-escolhido').innerText = 'Jogador 2: ' + jogador2
@@ -131,12 +139,5 @@ function limparTabuleiro() {
         celula.innerText = ''
         celula.style.backgroundColor = 'white'
     }
-}
-
-function novoJogo() {
-    jogadorAtual = jogador1
-    jogoAtivo = true
-    limparTabuleiro()
-
-    document.getElementById('jogador-atual').innerText = 'Jogador da Vez: ' + jogadorAtual
+    
 }
