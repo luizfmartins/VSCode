@@ -28,24 +28,27 @@
             text-align: center;
             margin: auto;
         }
+        input{
+            height: 105px;
+            width: 105px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
 <body>
-    <header>
+    
         <div>
             <h1>🎮Campeonato Mini Games</h1>
             <p>Inscrição de participantes</p>
+            <h1>Dados do participante</h1>
+            <form>
+                <label for="nome">Nome completo</label>
+                <br>
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
+            </form>
         </div>
-    </header>
-    <section>
-        <h1>Dados do participante</h1>
-        <form>
-            <label for="nome">Nome completo</label>
-            <br>
-            <input type="text" id="nome" placeholder="Digite seu nome" required>
-        </form>
-    </section>
+    
 
 </body>
 
