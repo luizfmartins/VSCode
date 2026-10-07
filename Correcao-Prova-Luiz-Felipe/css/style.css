@@ -29,6 +29,14 @@ header {
     width: 100%;
 }
 
+footer{
+    text-align: center;
+    background-color: #3511A1;
+    color: white;
+    padding: 40px;
+    width: 100%;
+}
+
 section {
     box-shadow: 0 5px 5px black;
     margin: 40px;
