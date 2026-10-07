@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova 01/10</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>TechWeek 2026</h1>
+        <p>Semana Acadêmica de Tecnologia e Informação</p>
+        <a href="#sec1">Evento</a> <a href="#sec2">Programação</a> <a href="#sec3">Inscrição</a>
+    </header>
+    <main>
+        <section id="sec1">
+            <h1>Regra da Avaliação</h1>
+            <div class="row">
+                <div class="div1">
+                    <h1>
+                        01 - Desenvolvimento
+                    </h1>
+                    <p>
+                        A avaliação é individual e deverá ser desenvolvida utilizando apenas HTML, CSS e JavaScript.
+                        <br><br>
+                        Não é permitido utilizar frameworks, bibliotecas externas ou códigos prontos.
+                    </p>
+                </div>
+                <div class="div1">
+                    <h1>
+                        02 - Consulta
+                    </h1>
+                    <p>
+                        É permitida a consulta aos materiais, exemplos e projetos desenvolvidos anteriormente durante as
+                        aulas.
+                        <br>
+                        Não será permitido acesso a internet durante a avaliação.
+                    </p>
+                </div>
+                <div class="div1">
+                    <h1>
+                        03 - Entrega
+                    </h1>
+                    <p>
+                        O projeto deverá respeitar a estrutura de arquivos solicitada e funcionar integralmente de forma
+                        local.
+                        <br>
+                        Antes da entrega, teste todas as funcionalidades e validações.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="div2">
+                    <h1>Tecnologia, inovação e conhecimento</h1>
+                    <p>A TechWeek 2026 reúne estudantes, professores e profissionais para compartilhar conhecimentos
+                        sobre o
+                        desenvolvimento de software, inteligência artificial e tecnologias para Web.
+                        <br>
+                        Participe das palestras, oficinas e minicursos durante a semana acadêmica
+                    </p>
+                </div>
+                <div class="div2">
+                    <img src="img/Seminfo.png" alt="">
+                </div>
+
+            </div>
+        </section>
+
+        <section id="sec2">
+            <h1>Programação</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Atividade</th>
+                        <th>Local</th>
+                        <th>Vagas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08:00</td>
+                        <td>Abertura Oficial</td>
+                        <td>Auditório</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td>09:00</td>
+                        <td>Desenvolvimento Web Moderno</td>
+                        <td>Auditório</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td>10:30</td>
+                        <td>Introdução a Inteligência Artificial</td>
+                        <td>Laboratório 01</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>14:00</td>
+                        <td>Construindo aplicações com JavaScript</td>
+                        <td>Laboratório 02</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>16:00</td>
+                        <td>Encerramento a premiação</td>
+                        <td>Auditório</td>
+                        <td>150</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="sec3">
+            <h1>Inscrição</h1>
+            <form id="formulario">
+                <fieldset>
+                    <legend>Dados Pessoais
+                    </legend>
+                    <div>
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" class="basico" placeholder="Digite seu nome" >
+
+                    </div>
+                    <div class="row">
+                        <div class="div3">
+                            <label for="idade">Idade</label>
+                            <input type="number" id="idade" class="basico" placeholder="Digite sua idade" min="16"
+                                max="100" >
+                        </div>
+                        <div class="div4">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" class="basico" placeholder="seunome@email.com"
+                                >
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="div3">
+                            <label for="instituicao">Instituição *</label>
+                            <input type="text" name="instituicao" id="instituicao" class="basico"
+                                placeholder="Digite sua instituição">
+                        </div>
+                        <div class="div4">
+                            <label for="curso">Curso *</label>
+                            <input type="text" name="curso" id="curso" class="basico" placeholder="Digite seu Curso"
+                                >
+                        </div>
+                    </div>
+                    <div class="data">
+                        <label for="data">Data de participação *</label>
+                        <input type="date" name="data" id="data" class="basico">
+                    </div>
+                </fieldset>
+                <br> <br>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div >
+                        <label for="minicurso">Minicurso *</label>
+                        <select id="minicurso" class="selecao" |>
+                            <option value="">Selecione</option>
+                            <option value="JavaScript para Web" class="minicurso">JavaScript para Web</option>
+                            <option value="Introdução à IA" class="minicurso">Introdução à IA</option>
+                            <option value="UX e Interfaces Web" class="minicurso">UX e Interfaces Web</option>
+                            <option value="Git e Git Hub" class="minicurso">Git e Git Hub</option>
+                        </select>
+                    </div>
+                    <div >
+                        <h4>Modalidade de participação</h4>
+                        <label for="presencial">Presencial</label>
+                        <input type="radio" name="modalidade" id="presencial" value="Presencial">
+                        <label for="online">Online</label>
+                        <input type="radio" name="modalidade" id="online" value="Online">
+                    </div>
+
+                    <div>
+                        <h4>Área de interesse *</h2>
+                            <input type="checkbox" name="desenvolvimento" id="desenvolvimento" class="interesse" value="Desenvolvimento Web">
+                            <label for="desenvolvimento">Desenvolvimento Web</label>
+                            <input type="checkbox" name="ia" id="ia" class="interesse" value="Inteligência Artificial">
+                            <label for="ia">Inteligência Artificial</label>
+                            <input type="checkbox" name="mobile" id="mobile" class="interesse" value="Desenvolvimento Mobile">
+                            <label for="mobile">Desenvolvimento Mobile</label>
+                            <input type="checkbox" name="dados" id="dados" class="interesse" value="Ciência de Dados">
+                            <label for="dados">Ciência de Dados</label>
+                    </div>
+                    <br>
+                    <div class="observacoes">
+                        <label for="obs">Observações</label>
+
+                        <textarea id="obs" class="obs" placeholder="Digite alguma observação..."></textarea>
+                    </div>
+                </fieldset>
+                <p id="insc">
+                </p>
+                <button type="submit" class="inscricao">Realizar Inscrição</button>
+                <button type="reset" class="limpar">Limpar</button>
+            </form>
+        </section>
+        <section id="secFim">
+            <div>
+                <h1>Inscrição Realizada</h1>
+                <p>Confira os dados informados</p>
+                <p id="pParticipante"><b>Participante: </b></p>
+                <p id="pEmail"><b>Email: </b></p>
+                <p id="pInstituicao"><b>Instituição: </b></p>
+                <p id="pCurso"><b>Curso: </b></p>
+                <p id="pMinicurso"><b>Minicurso: </b></p>
+                <p id="pModalidade"><b>Modalidade: </b></p>
+                <p id="pInteresse"><b>Interesses: </b></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

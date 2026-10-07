@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(241, 227, 203);
+    width: 900px;
+    height: 900px;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    color: black;
+}
+h2{
+    text-align: center;
+    color: gray;
+    font-size: 18px;
+}
+
+p{
+    color: black;
+}
+
+section {
+    padding: 10px;
+    margin: 50px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    color: gray;
+}
+.basico{
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.mensagem{
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.selecao{
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.cadastro{
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(22, 156, 22);
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+}
+.row div {
+    width: 100%;
+}
+.idade{
+    margin-right: 5px;
+}
+.data{
+    margin-left: 5px;
+}
+.email{
+    margin-right: 5px;
+}
+.senha{
+    margin-left: 5px;
+}
