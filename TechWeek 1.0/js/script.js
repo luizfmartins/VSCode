@@ -20,7 +20,7 @@ function cadastrar() {
         insc.style.color = 'red'
         return
     }
-    let idade = document.getElementById('idade').value.trim()
+    let idade = Number(document.getElementById('idade').value.trim())
     if (idade < 16 || idade > 100) {
         let insc = document.getElementById('insc')
         insc.innerText = 'Inscrição não pôde ser realizada!'
@@ -50,7 +50,7 @@ function cadastrar() {
         return
     }
 
-    let data = new Date(document.getElementById('data').value + 'T00:00:00');
+    let data = new Date(document.getElementById('data').value);
     let dataValida = verificarData(data)
     if (data === '' || dataValida === false) {
         let insc = document.getElementById('insc')
