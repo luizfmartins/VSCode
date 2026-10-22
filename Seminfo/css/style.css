@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #F4F6F8;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+
+}
+
+main {
+    width: 750px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    background-color: #3511A1;
+    color: white;
+    padding: 40px;
+    width: 100%;
+}
+
+#sec-inscricao {
+    box-shadow: 0 5px 5px black;
+    margin: 40px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border: 2px black;
+}
+
+a{
+    color: lightblue;
+    text-decoration: none;
+}
+
+a:hover{
+    color: lightblue;
+    text-decoration: underline;
+}
+
+#sec-participantes {
+    display: none;
+    box-shadow: 0 5px 5px black;
+    margin: 40px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border: 2px black;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#sec-inscricao button {
+    display: block;
+    margin: auto;
+    padding: 15px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(13, 10, 150);
+    color: white;
+}
+
+#mensagem {
+    text-align: center;
+}
