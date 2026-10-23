@@ -68,6 +68,7 @@ formulario.addEventListener('submit', function (event) {
         mensagem.style.color = 'red'
         return
     }
+
     const participante = {
         nome: nome,
         email: email,
@@ -90,13 +91,19 @@ function mostrarInscricao(){
 function mostrarParticipantes() {
     lista.innerHTML = ''
     participantes.forEach(function(participante, indice){
-        const item = document.createElement('li')
-        item.innerText = (indice + 1) + '. ' +
-        participante.nome + ' - ' +
-        participante.email + ' - ' +
-        participante.curso
+        const itemParticipante = document.createElement('dt')
+        const itemNome = document.createElement('dd')
+        const itemEmail = document.createElement('dd')
+        const itemCurso = document.createElement('dd')
+        itemParticipante.innerText = 'Participante: ' + (indice + 1)
+        itemNome.innerText = participante.nome
+        itemEmail.innerText = participante.email
+        itemCurso.innerText = participante.curso
 
-        lista.appendChild(item)
+        lista.appendChild(itemParticipante)
+        lista.appendChild(itemNome)
+        lista.appendChild(itemEmail)
+        lista.appendChild(itemCurso)
     })
     total.innerText = participantes.length
 
