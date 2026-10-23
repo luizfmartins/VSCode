@@ -96,9 +96,9 @@ function mostrarParticipantes() {
         const itemEmail = document.createElement('dd')
         const itemCurso = document.createElement('dd')
         itemParticipante.innerText = 'Participante: ' + (indice + 1)
-        itemNome.innerText = participante.nome
-        itemEmail.innerText = participante.email
-        itemCurso.innerText = participante.curso
+        itemNome.innerText = 'Nome: ' + participante.nome
+        itemEmail.innerText = 'Email: ' + participante.email
+        itemCurso.innerText = 'Curso: ' + participante.curso
 
         lista.appendChild(itemParticipante)
         lista.appendChild(itemNome)
