@@ -62,14 +62,12 @@ formulario.addEventListener('submit', function (event) {
     event.preventDefault()
 
     const nome = campoNome.value.trim()
-    const idade = campoIdade.value.trim()
+    const idade = campoIdade.value
     const curso = campoCurso.value
     const email = campoEmail.value.trim()
     const matricula = campoMatricula.value.trim()
 
-    if (nome === '' || email === '' || curso === '') {
-        mensagem.innerText = 'Preencha todos os campos.'
-        mensagem.style.color = 'red'
+    if(!verificarParticipante(nome, idade, curso, matricula, email)){
         return
     }
 
@@ -121,5 +119,21 @@ function mostrarParticipantes() {
 
     document.getElementById('sec-participantes').style.display = 'block'
     document.getElementById('sec-inscricao').style.display = 'none'
+}
+
+function verificarParticipante(nome, idade, curso, matricula, email) {
+    if (nome === '' || email === '' || curso === '' || idade === '' || matricula === '') {
+        mensagem.innerText = 'Preencha todos os campos corretamente.'
+        mensagem.style.color = 'red'
+        return false
+    }
+    for (let i = 0; i < participantes.length; i++) {
+        if (participantes[i].matricula === matricula || participantes[i].email === email) {
+            mensagem.innerText = 'Participante já cadastrado.'
+            mensagem.style.color = 'red'
+            return false
+        }
+    }
+    return true
 }
 
