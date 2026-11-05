@@ -47,8 +47,10 @@ const participantes = []
 const formulario = document.getElementById('formulario')
 
 const campoNome = document.getElementById('nome')
-const campoEmail = document.getElementById('email')
+const campoIdade = document.getElementById('idade')
 const campoCurso = document.getElementById('curso')
+const campoMatricula = document.getElementById('matricula')
+const campoEmail = document.getElementById('email')
 
 const mensagem = document.getElementById('mensagem')
 
@@ -60,8 +62,10 @@ formulario.addEventListener('submit', function (event) {
     event.preventDefault()
 
     const nome = campoNome.value.trim()
-    const email = campoEmail.value.trim()
+    const idade = campoIdade.value.trim()
     const curso = campoCurso.value
+    const email = campoEmail.value.trim()
+    const matricula = campoMatricula.value.trim()
 
     if (nome === '' || email === '' || curso === '') {
         mensagem.innerText = 'Preencha todos os campos.'
@@ -71,8 +75,10 @@ formulario.addEventListener('submit', function (event) {
 
     const participante = {
         nome: nome,
-        email: email,
-        curso: curso
+        idade: idade,
+        curso: curso,
+        matricula: matricula,
+        email: email
     }
 
 
@@ -83,27 +89,33 @@ formulario.addEventListener('submit', function (event) {
     formulario.reset()
 })
 
-function mostrarInscricao(){
+function mostrarInscricao() {
     document.getElementById('sec-inscricao').style.display = 'block'
     document.getElementById('sec-participantes').style.display = 'none'
 }
 
 function mostrarParticipantes() {
     lista.innerHTML = ''
-    participantes.forEach(function(participante, indice){
+    participantes.forEach(function (participante, indice) {
         const itemParticipante = document.createElement('dt')
         const itemNome = document.createElement('dd')
-        const itemEmail = document.createElement('dd')
+        const itemIdade = document.createElement('dd')
         const itemCurso = document.createElement('dd')
+        const itemMatricula = document.createElement('dd')
+        const itemEmail = document.createElement('dd')
         itemParticipante.innerText = 'Participante: ' + (indice + 1)
         itemNome.innerText = 'Nome: ' + participante.nome
-        itemEmail.innerText = 'Email: ' + participante.email
+        itemIdade.innerText = 'Idade: ' + participante.idade
         itemCurso.innerText = 'Curso: ' + participante.curso
+        itemMatricula.innerText = 'Matrícula: ' + participante.matricula
+        itemEmail.innerText = 'Email: ' + participante.email
 
         lista.appendChild(itemParticipante)
         lista.appendChild(itemNome)
-        lista.appendChild(itemEmail)
+        lista.appendChild(itemIdade)
         lista.appendChild(itemCurso)
+        lista.appendChild(itemMatricula)
+        lista.appendChild(itemEmail)
     })
     total.innerText = participantes.length
 
