@@ -54,7 +54,7 @@ const campoEmail = document.getElementById('email')
 
 const mensagem = document.getElementById('mensagem')
 
-const lista = document.getElementById('participantes')
+const tabela = document.getElementById('tabela-participantes')
 
 const total = document.getElementById('total')
 
@@ -64,10 +64,10 @@ formulario.addEventListener('submit', function (event) {
     const nome = campoNome.value.trim()
     const idade = campoIdade.value
     const curso = campoCurso.value
-    const email = campoEmail.value.trim()
+    const email = campoEmail.value.trim().toLowerCase()
     const matricula = campoMatricula.value.trim()
 
-    if(!verificarParticipante(nome, idade, curso, matricula, email)){
+    if (!verificarParticipante(nome, idade, curso, matricula, email)) {
         return
     }
 
@@ -93,28 +93,27 @@ function mostrarInscricao() {
 }
 
 function mostrarParticipantes() {
-    lista.innerHTML = ''
     participantes.forEach(function (participante, indice) {
-        const itemParticipante = document.createElement('dt')
-        const itemNome = document.createElement('dd')
-        const itemIdade = document.createElement('dd')
-        const itemCurso = document.createElement('dd')
-        const itemMatricula = document.createElement('dd')
-        const itemEmail = document.createElement('dd')
-        itemParticipante.innerText = 'Participante: ' + (indice + 1)
-        itemNome.innerText = 'Nome: ' + participante.nome
-        itemIdade.innerText = 'Idade: ' + participante.idade
-        itemCurso.innerText = 'Curso: ' + participante.curso
-        itemMatricula.innerText = 'Matrícula: ' + participante.matricula
-        itemEmail.innerText = 'Email: ' + participante.email
+        tabela.innerHTML = ''
+        participantes.forEach(function (participante) {
+            const linha = document.createElement('tr')
+            const dados = [
+                participante.nome,
+                participante.idade,
+                participante.curso,
+                participante.matricula,
+                participante.email
+            ]
 
-        lista.appendChild(itemParticipante)
-        lista.appendChild(itemNome)
-        lista.appendChild(itemIdade)
-        lista.appendChild(itemCurso)
-        lista.appendChild(itemMatricula)
-        lista.appendChild(itemEmail)
+            dados.forEach(function (dado) {
+                const coluna = document.createElement('td')
+                coluna.innerText = dado
+                linha.appendChild(coluna)
+            })
+            tabela.appendChild(linha)
+        })
     })
+
     total.innerText = participantes.length
 
     document.getElementById('sec-participantes').style.display = 'block'

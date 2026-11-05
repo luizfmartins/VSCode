@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    width: 750px;
+    width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -34,12 +34,12 @@ header {
     border: 2px black;
 }
 
-a{
+a {
     color: lightblue;
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     color: lightblue;
     text-decoration: underline;
 }
@@ -47,7 +47,7 @@ a:hover{
 #sec-participantes {
     display: none;
     box-shadow: 0 5px 5px black;
-    margin: 40px;
+    margin: 30px;
     border-radius: 10px;
     background-color: white;
     color: black;
@@ -55,7 +55,8 @@ a:hover{
     border: 2px black;
 }
 
-input, select {
+input,
+select {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -76,4 +77,26 @@ input, select {
 
 #mensagem {
     text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #a38e8e;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: aliceblue;
 }

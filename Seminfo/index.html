@@ -39,14 +39,24 @@
                 <br><br>
                 <button type="submit">Cadastrar</button>
             </form>
-            <p id="mensagem"></p>
+            <p id="mensagem" role="status"></p>
         </section>
         <section id="sec-participantes">
             <h2>Participantes Inscritos</h2>
             <p>Total: <span id="total">0</span></p>
-
-            <dl id="participantes">
-            </dl>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                            <th>Curso</th>
+                            <th>Matrícula</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-participantes">
+                    </tbody>
+                </table>
         </section>
     </main>
     <script src="js/script.js"></script>
