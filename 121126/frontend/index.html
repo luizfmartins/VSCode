@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminfo 3.2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Seminfo 3.2</h1>
+        <p>Sistema de Inscrições da Semana de Informática 2026</p>
+        <a href="javascript:mostrarInscricao()">Inscrição</a>
+        <a href="javascript:mostrarParticipantes()">Participantes</a>
+    </header>
+    <main>
+        <section id="sec-inscricao">
+            <h2>Inscrição de Participantes</h2>
+            <h2>Nova Inscrição</h2>
+            
+            <form id="formulario">
+                <section>
+                    <h2>1. Informações Pessoais</h2>
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" required>
+                    <label for="idade">Idade</label>
+                    <input type="number" id="idade" min="1" max="120" required>
+                    <label for="curso">Curso</label>
+                    <select id="curso" required>
+                        <option value="" hidden></option>
+                        <option value="Sistemas de Informação">Sistemas de Informação</option>
+                        <option value="Gestão de TI">Gestão de TI</option>
+                        <option value="Técnico de Informática">Técnico de Informática</option>
+                        <option value="TADS">TADS</option>
+                    </select>
+                    <label for="matricula">Matrícula</label>
+                    <input type="text" id="matricula" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </section>
+                <section>
+                    <h2>2. Participação em eventos</h2>
+                    <fieldset>
+                        <legend>Modalidade</legend>
+                        <label>
+                            <input type="radio" name="modalidade" value="Ouvinte" required>
+                            Ouvinte
+                        </label>
+                        <label>
+                            <input type="radio" name="modalidade" value="Apresentador" >
+                            Apresentador
+                        </label>
+                        <label>
+                            <input type="radio" name="modalidade" value="Organizador">
+                            Organizador
+                        </label>
+                    </fieldset>
+                    <label for="minicurso">Minicurso</label>
+                    <select id="minicurso" required>
+                        <option value="" hidden></option>
+                        <option value="Introdução ao Python">Introdução ao Python</option>
+                        <option value="Desenvolvimento Mobile">Desenvolvimento Mobile</option>
+                        <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+                        <option value="Banco de Dados MySql">Banco de Dados MySql</option>
+                    </select>
+                    <fieldset>
+                        <legend>Outras Atividades(Opcional)</legend>
+                        <label for="ia">
+                            <input type="checkbox" id="ia" name="evento" value="Palestra: IA">
+                            Palestra: IA
+                        </label>
+                        <label for="mercado">
+                            <input type="checkbox" id="mercado" name="evento" value="Mercado de TI">
+                            Mercado de TI
+                        </label>
+                        <label for="git">
+                            <input type="checkbox" id="git" name="evento" value="Oficina: Git e Github">
+                            Oficina: Git e Github
+                        </label>
+                        <label for="carreiras">
+                            <input type="checkbox" id="carreiras" name="evento" value="Mesa Redonda: Carreiras em TI">
+                            Mesa Redonda: Carreiras em TI 
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Turno de Preferência</legend>
+
+                        <label>
+                            <input type="radio" name="turno" value="Matutino" required>
+                            Matutino
+                        </label>
+                        <label>
+                            <input type="radio" name="turno" value="Vespertino" >
+                            Vespertino
+                        </label>
+                        <label>
+                            <input type="radio" name="turno" value="Noturno">
+                            Noturno
+                        </label>
+                    </select>
+                    </fieldset>
+                </section>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p id="mensagem" role="status"></p>
+        </section>
+        <section id="sec-participantes">
+            <h2>Participantes Inscritos</h2>
+            <p>Total: <span id="total">0</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Curso</th>
+                        <th>Matrícula</th>
+                        <th>Email</th>
+                        <th>Modalidade</th>
+                        <th>Minicurso</th>
+                        <th>Turno</th>
+                        <th>Outras Atividades</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-participantes">
+                </tbody>
+                
+            </table>
+        </section>
+        
+    </main>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

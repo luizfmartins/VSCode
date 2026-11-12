@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participantes - Seminfo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="participantes" id="participantes">
+    <header>
+        <h1>SEMINFO</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="admin.html">Eventos</a>
+            <a href="#" id="sair">Sair</a>
+        </nav>
+    </header>
+    <main>
+        <section class="card">
+            <h1>Participantes</h1>
+            <p class="muted">
+                Os registros vem do MySQL.
+                Somente admin podem editar e excluir.
+            </p>
+            <p id="msg" class="msg"></p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                            <th>Email</th>
+                            <th>Perfil</th>
+                            <th>Curso</th>
+                            <th>Matrícula</th>
+                            <th>Evento</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-participantes">
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="editar-box" class="card-hidden">
+            <h2>Editar Participante</h2>
+            <form id="form-editar">
+                <input type="hidden" name="id">
+                <label>
+                    Nome:
+                    <input type="text" name="nome" required>
+                </label>
+                <label>
+                    Idade:
+                    <input type="number" name="idade" min="1" max="120" required>
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email" required>
+                </label>
+                <div id="ediar-aluno">
+                    <label>
+                        Matrícula:
+                        <input type="text" name="matricula">
+                    </label>
+                    <label>
+                        Curso:
+                        <input type="text" name="curso">
+                    </label>
+                </div>
+                <button type="submit">Salvar Alterações</button>
+                <button type="button" class="light" id="cancelar-edicao">Cancelar</button>
+            </form>
+        </section>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

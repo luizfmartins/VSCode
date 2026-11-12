@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #F4F6F8;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+
+}
+
+header {
+    text-align: center;
+    background-color: #3511A1;
+    color: white;
+    padding: 40px;
+    width: 100%;
+}
+
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+section {
+    box-shadow: 0 3px 3px black;
+    margin: 30px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+    border: 2px black;
+}
+
+label{
+    display: block;
+    margin: 12px 0 5px;
+}
+a {
+    color: lightblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightblue;
+    text-decoration: underline;
+}
+
+#sec-participantes {
+    display: none;
+    box-shadow: 0 5px 5px black;
+    margin: 30px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border: 2px black;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+button {
+    display: block;
+    margin: auto;
+    padding: 15px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(13, 10, 150);
+    color: white;
+}
+
+#mensagem {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #a38e8e;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: aliceblue;
+}
+
+option {
+    font-size: 15px;
+}
+fieldset{
+    margin: 18px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+fieldset label{
+    display: block;
+    margin: 10px 0;
+    
+}
+
+#login, #cadastro, #admin, #participantes{
+    color: rgb(5, 99, 67);
+}
+
+.card-narrow button, .card button, .card-hidden button{
+    display: inline;
+    background-color: rgb(48, 105, 86);
+}
+.card-narrow a{
+    color: blue;
+}
+
+.hidden{
+    display: none ;
+}
+
