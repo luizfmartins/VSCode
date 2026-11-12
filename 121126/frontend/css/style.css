@@ -3,19 +3,30 @@
 }
 
 body {
-    margin: 0;
-    background-color: #F4F6F8;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-
+    color: #222;
+    background-color: #F4F6F8;
+    margin: 0;
 }
 
 header {
-    text-align: center;
-    background-color: #3511A1;
+    background-color: #172b53;
     color: white;
-    padding: 40px;
-    width: 100%;
+    padding: 16px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+nav{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+nav a{
+    color: white;
+    text-decoration: none;
 }
 
 main {
@@ -24,114 +35,94 @@ main {
     padding: 20px;
 }
 
-section {
-    box-shadow: 0 3px 3px black;
-    margin: 30px;
-    border-radius: 10px;
-    background-color: white;
-    padding: 20px;
-    border: 2px black;
+.card{
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #0001;
+    margin-bottom: 20px;
+}
+
+.narrow{
+    max-width: 540px;
+    margin: 35px auto;
+}
+
+h1{
+    margin-top: 6px;
+    color: #1b2a49;
+}
+
+form{
+    display: grid;
+    gap: 12px;
 }
 
 label{
-    display: block;
-    margin: 12px 0 5px;
-}
-a {
-    color: lightblue;
-    text-decoration: none;
+    display: grid;
+    gap: 6px;
+    font-weight: 600;
 }
 
-a:hover {
-    color: lightblue;
-    text-decoration: underline;
-}
-
-#sec-participantes {
-    display: none;
-    box-shadow: 0 5px 5px black;
-    margin: 30px;
-    border-radius: 10px;
-    background-color: white;
-    color: black;
-    padding: 30px;
-    border: 2px black;
-}
-
-input:not([type="radio"]):not([type="checkbox"]),
-select {
-    width: 100%;
+input, select, button{
+    font: inherit;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    border-radius: 7px;
+    border: 1px solid #cbd3e1;
 }
 
-button {
-    display: block;
-    margin: auto;
-    padding: 15px 15px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(13, 10, 150);
+button{
+    background: #2557ba;
     color: white;
+    border: 0;
+    cursor: pointer;
 }
 
-#mensagem {
-    text-align: center;
+button.danger{
+    background-color: #b22331;
 }
 
-table {
+button.light{
+    background-color: #c6bebe;
+    color: #17315c;
+}
+
+button:disabled{
+    opacity: 0.5;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.msg{
+    min-height: 20px;
+    color: #b22331;
+}
+
+.muted{
+    color: #647084;
+}
+
+.table-wrap{
+    overflow: auto;
+}
+
+table{
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-th,
-td {
+th, td{
     padding: 12px;
     border: 1px solid #ddd;
     text-align: left;
-}
-
-th {
-    background-color: #a38e8e;
-    color: white;
-}
-
-tbody tr:nth-child(even) {
-    background-color: aliceblue;
-}
-
-option {
     font-size: 15px;
 }
-fieldset{
-    margin: 18px 0;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-fieldset label{
-    display: block;
-    margin: 10px 0;
-    
-}
 
-#login, #cadastro, #admin, #participantes, #inicio{
-    color: rgb(5, 99, 67);
-}
-
-.card-narrow button, .card button, .card-hidden button{
-    display: inline;
-    background-color: rgb(48, 105, 86);
-}
-.card-narrow a{
-    color: blue;
-}
-
-.hidden{
-    display: none ;
+td button{
+    margin: 2px;
+    padding: 7px;
 }
 
