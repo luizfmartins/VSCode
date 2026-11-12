@@ -11,8 +11,8 @@ body {
 }
 
 main {
-    width: 1000px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 30px auto;
     padding: 20px;
 }
 
@@ -23,17 +23,19 @@ header {
     padding: 40px;
     width: 100%;
 }
-
-#sec-inscricao {
-    box-shadow: 0 5px 5px black;
-    margin: 40px;
+section {
+    box-shadow: 0 3px 3px black;
+    margin: 30px;
     border-radius: 10px;
     background-color: white;
     color: black;
-    padding: 30px;
+    padding: 20px;
     border: 2px black;
 }
-
+label{
+    display: block;
+    margin: 12px 0 5px;
+}
 a {
     color: lightblue;
     text-decoration: none;
@@ -55,7 +57,7 @@ a:hover {
     border: 2px black;
 }
 
-input,
+input:not([type="radio"]):not([type="checkbox"]),
 select {
     width: 100%;
     padding: 10px;
@@ -100,3 +102,19 @@ th {
 tbody tr:nth-child(even) {
     background-color: aliceblue;
 }
+
+option {
+    font-size: 15px;
+}
+fieldset{
+    margin: 18px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+fieldset label{
+    display: block;
+    margin: 10px 0;
+    
+}
+

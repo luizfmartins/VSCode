@@ -46,12 +46,6 @@ const participantes = []
 
 const formulario = document.getElementById('formulario')
 
-const campoNome = document.getElementById('nome')
-const campoIdade = document.getElementById('idade')
-const campoCurso = document.getElementById('curso')
-const campoMatricula = document.getElementById('matricula')
-const campoEmail = document.getElementById('email')
-
 const mensagem = document.getElementById('mensagem')
 
 const tabela = document.getElementById('tabela-participantes')
@@ -61,13 +55,29 @@ const total = document.getElementById('total')
 formulario.addEventListener('submit', function (event) {
     event.preventDefault()
 
-    const nome = campoNome.value.trim()
-    const idade = campoIdade.value
-    const curso = campoCurso.value
-    const email = campoEmail.value.trim().toLowerCase()
-    const matricula = campoMatricula.value.trim()
+    const nome = document.getElementById('nome').value.trim()
+    const idadeTexto = document.getElementById('idade').value
+    const idade = Number(idadeTexto)
+    const curso = document.getElementById('curso').value
+    const email = document.getElementById('matricula').value.trim().toLowerCase()
+    const matricula = document.getElementById('email').value.trim()
 
-    if (!verificarParticipante(nome, idade, curso, matricula, email)) {
+    const modalidadeSelecionada = document.querySelector('input[name = modalidade]:checked')
+    const turnoSelecionado = document.querySelector('input[name = turno]:checked')
+    const caixasMarcadas = document.querySelectorAll('input[name = evento]:checked')
+
+    const modalidade = modalidadeSelecionada?.value || ''
+    const minicurso = document.getElementById('minicurso').value
+    const eventos = []
+    caixasMarcadas.forEach(function(caixa){
+        eventos.push(caixa.value)
+    })
+    const turno = turnoSelecionado?.value || ''
+    
+
+
+
+    if (!verificarParticipante(nome, idade, curso, matricula, email, modalidade, minicurso, turno)) {
         return
     }
 
@@ -76,7 +86,11 @@ formulario.addEventListener('submit', function (event) {
         idade: idade,
         curso: curso,
         matricula: matricula,
-        email: email
+        email: email,
+        modalidade: modalidade,
+        minicurso: minicurso,
+        turno: turno,
+        eventos: eventos
     }
 
 
@@ -102,7 +116,11 @@ function mostrarParticipantes() {
                 participante.idade,
                 participante.curso,
                 participante.matricula,
-                participante.email
+                participante.email,
+                participante.modalidade,
+                participante.minicurso,
+                participante.turno,
+                participante.eventos.join(', ') || 'Nenhuma'
             ]
 
             dados.forEach(function (dado) {
@@ -120,8 +138,8 @@ function mostrarParticipantes() {
     document.getElementById('sec-inscricao').style.display = 'none'
 }
 
-function verificarParticipante(nome, idade, curso, matricula, email) {
-    if (nome === '' || email === '' || curso === '' || idade === '' || matricula === '') {
+function verificarParticipante(nome, idade, curso, matricula, email, modalidade, minicurso, turno) {
+    if (nome === '' || email === '' || curso === '' || idade === '' || matricula === '' || modalidade === '' || minicurso === '' || turno === '') {
         mensagem.innerText = 'Preencha todos os campos corretamente.'
         mensagem.style.color = 'red'
         return false
