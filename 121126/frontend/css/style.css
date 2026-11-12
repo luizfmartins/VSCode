@@ -119,7 +119,7 @@ fieldset label{
     
 }
 
-#login, #cadastro, #admin, #participantes{
+#login, #cadastro, #admin, #participantes, #inicio{
     color: rgb(5, 99, 67);
 }
 
